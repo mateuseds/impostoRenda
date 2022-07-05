@@ -150,7 +150,7 @@ body {
         flex-direction: row;
     }
     .opcoes p {
-        margin: 0;
+        margin: 0 10px;
     }
     .fa-solid {
         margin: 0;
