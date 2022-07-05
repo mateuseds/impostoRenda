@@ -45,34 +45,36 @@
                         </div>
 
                         <div class="containerInput">
-                            <div>
-                                <i class="fa-solid fa-money-bill"></i> <span>*Renda Bruta</span>
-                                <input type="text" name="inputRendaBruta" id="inputRendaBruta" class="inputRendabruta" />
+                            <div class="input_main">
+                                <div><i class="fa-solid fa-money-bill"></i> <span>*Renda Bruta</span></div>
+                                <div><input type="text" name="inputRendaBruta" id="inputRendaBruta" class="inputRendabruta" /></div>
                             </div>
 
-                            <div>
-                                <i class="fa-solid fa-baby"></i> <span>*Número de dependentes</span>
-                                <input type="text" name="inputNumeroDependentes" id="inputNumeroDependentes" class="inputNumeroDependentes" />
+                            <div class="input_main">
+                                <div><i class="fa-solid fa-baby"></i> <span>*Número de dependentes</span></div>
+                                <div><input type="text" name="inputNumeroDependentes" id="inputNumeroDependentes" class="inputNumeroDependentes" /></div>
+                                
+                                
                             </div>
 
-                            <div>
-                                <i class="fa-solid fa-money-bill-trend-up"></i> <span>*13º salário</span>
-                                <input type="text" name="inputDecimoTerceiro" id="inputDecimoTerceiro" class="inputDecimoTerceiro" />
+                            <div class="input_main">
+                                <div><i class="fa-solid fa-money-bill-trend-up"></i> <span>*13º salário</span></div>
+                                <div><input type="text" name="inputDecimoTerceiro" id="inputDecimoTerceiro" class="inputDecimoTerceiro" /></div>
                             </div>
 
-                            <div>
-                                <i class="fa-solid fa-house-user"></i> <span>*Aluguel</span>
-                                <input type="text" name="inputAluguel" id="inputAluguel" class="inputAluguel" />
+                            <div class="input_main">
+                                <div><i class="fa-solid fa-house-user"></i> <span>*Aluguel</span></div>
+                                <div><input type="text" name="inputAluguel" id="inputAluguel" class="inputAluguel" /></div>
                             </div>
 
-                            <div>
-                                <i class="fa-solid fa-burger"></i> <span>*Pensão alimentícia</span>
-                                <input type="text" name="inputPensaoAlimenticia" id="inputPensaoAlimenticia" class="inputPensaoAlimenticia" />
+                            <div class="input_main">
+                                <div><i class="fa-solid fa-burger"></i> <span>*Pensão alimentícia</span></div>
+                                <div><input type="text" name="inputPensaoAlimenticia" id="inputPensaoAlimenticia" class="inputPensaoAlimenticia" /></div>
                             </div>
 
-                            <div>
-                                <i class="fa-solid fa-hand-holding-dollar"></i> <span>*Auxílio Emergencial</span>
-                                <input type="text" name="inputAuxilio" id="inputAuxilio" class="inputAuxilio" />
+                            <div class="input_main">
+                                <div><i class="fa-solid fa-hand-holding-dollar"></i> <span>*Auxílio Emergencial</span></div>
+                                <div><input type="text" name="inputAuxilio" id="inputAuxilio" class="inputAuxilio" /></div>
                             </div>
 
                             <div>
@@ -80,11 +82,11 @@
                                 investimentos?</span>
                                 <fieldset class="investimentoRadioButton">
                                     <label>*Sim
-                                    <input type="radio" class="investimentoTrue" name="investimento"/>
-                                </label>
+                                        <input type="radio" class="investimentoTrue" name="investimento" onchange="geraCampoInvestimento(rInvestimentoTrue, rInvestimentoFalse)" />
+                                    </label>
                                     <label>*Não
-                                    <input type="radio" class="investimentoFalse" name="investimento"/>
-                                </label>
+                                        <input type="radio" class="investimentoFalse" name="investimento" onchange="geraCampoInvestimento(rInvestimentoTrue, rInvestimentoFalse)" />
+                                    </label>
                                 </fieldset>
                             </div>
 
@@ -119,6 +121,8 @@
                     <h1>Relatório</h1>
                     <table class="campoInformacoes"></table>
                 </div>
+                
+                <button class="refazerSimulacao" onclick="voltarSimulacao()">Iniciar outra simulação</button>
             </div>
         </div>
         <div class="containerRelatorio">
