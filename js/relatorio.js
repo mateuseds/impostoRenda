@@ -342,3 +342,8 @@ function exibeInformacoes(periodo) {
 
     emitirRelatorio();
 }
+
+// Essa funcao regarrega a pagina
+function voltarSimulacao() {
+    window.location.reload();
+}
