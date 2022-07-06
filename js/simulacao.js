@@ -234,17 +234,6 @@ function criaTodosOsCampos() {
     auxControle = true;
 }
 
-function deletaCampos() {
-    let inputs = Array.from(document.querySelectorAll('.declarandoInvestimento input'));
-    verificaInvestimentoChecado(allInputInvestimento);
-
-    for (let i = 0; i < inputs.length; i++) {
-        if (inputs[i].innerHTML !== arrayNomes[i]) {
-            inputs[i].parentElement.remove();
-        }
-    }
-}
-
 // Gera um objeto com todos os dados fornecidos pelo usuario
 function dados(tag) {
     const objeto = {
